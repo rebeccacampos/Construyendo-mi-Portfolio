@@ -24,8 +24,8 @@
                 <img src="imagenes/luna.png" />
                 </div>
             </nav>
-            <div>
-                <div>
+            <section>
+                <div id="presentacion">
                     <p>Product Owner . Disenadora UX . Desarrolladora Full Stack</p>
                     </div>
                         <h1>
@@ -42,16 +42,16 @@
                     <button type="button">Trabaja conmigo</button>
                 </div>
                 <img src="imagenes/rebecca-ilustracion.png"> <!-- ⚠️ exportar bien todas las imagenes en figma para que tengan buena calidad -->
-            </div>
+            </section>
         </header>
         <main>
-            <div id="competencias">
+            <section id="competencias">
                 <h1>Mapa de Carrera y Competencias</h1>
-                <p>Haz clic en cada área para explorar los detalles de mi camino profesionañl</p>
+                <p>Haz clic en cada área para explorar los detalles de mi camino profesional</p>
                 <div id="selectores-competencias">
                     <div>
                         <div>
-                            <img src="imagenes/circulito-azul.png">
+                            <img src="imagenes/circulito-azul.png"> 
                             <div>
                                 <p>Desarrollo y Tecnología</p>
                             </div>
@@ -109,28 +109,161 @@
                         </div>
                     </div> 
                 </div>
-            </div>
+            </section>
 
-            <div id="proyectos">
+            <section id="proyectos">
                 <div>
                     <h1>Proyectos</h1>
                     <nav>
-                        <!-- Aquí la idea es que vaya el nav de la sección de proyectos: la funcionalidad del buscador y los filtros se harán con javascript-->
+                        <!-- Aquí la idea es que vaya el nav de la sección de proyectos:
+                        la funcionalidad del buscador y los filtros se harán con javascript-->
+                        <div class="contenedor-buscador">
+                            <img src="imagenes/lupa.png" />
+                            <!-- no usamos la etiqueta form ya que no queremos enviar datos al servidor, 
+                            la idea es usar un .addEventListener() usando javascript para usar el input como filtro en tiempo real  -->
+                            <input type="text" id="buscador-proyectos" name="proyectosAbuscar" placeholder="Buscar proyecto..."> 
+                        </div>
+                        <!-- botones que actuan como filtros
+                        No van dentro de una etiqueta form  porque son controles de interfaz, 
+                        no tienen el propósito de recoger datos del usuario para enviarlos o procesarlos a un servidor-->
+                        <button type="button">Todos</button>
+                        <button type="button">Productos</button>
+                        <button type="button">UX/UI</button>
+                        <button type="button">Software</button>
                     </nav>
                 </div>
+                <div id="grid-proyectos">
+                    <article> <!--Tarjeta 1-->
+                        <!-- Bloque superior de color (puede contener el texto del rol o una imagen de fondo) -->
+                        <div>
+                            <p>ROL: PRODUCT OWNER</p>
+                        </div>
+
+                        <!-- Bloque inferior blanco -->
+                        <div>
+                            <div >
+                                <h3>Optimización del Backlog</h3>
+                                <p>Refactorización del flujo de trabajo Scrum, priorización con MoSCoW y alineación entre stakeholders técnicos y comerciales.</p>
+                            </div>
+
+                            <!-- Pie de tarjeta con etiquetas a la izquierda y enlace a la derecha -->
+                            <div>
+                                <div>
+                                    <span>Scrum</span>
+                                    <span>Jira</span>
+                                </div>
+                                <a href="#">Detalles ➔</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article> <!--Tarjeta 2-->
+                        <!-- Bloque superior de color (puede contener el texto del rol o una imagen de fondo) -->
+                        <div>
+                            <p>ROL: UX DESIGNER</p>
+                        </div>
+
+                        <!-- Bloque inferior blanco -->
+                        <div>
+                            <div >
+                                <h3>Crear un sistema de diseño</h3>
+                                <p>Creación de un sistema de componentes accesibles en Figma con documentación para desarrolladores.</p>
+                            </div>
+
+                            <!-- Pie de tarjeta con etiquetas a la izquierda y enlace a la derecha -->
+                            <div>
+                                <div>
+                                    <span>Figma</span>
+                                </div>
+                                <a href="#">Detalles ➔</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article> <!--Tarjeta 3-->
+                        <!-- Bloque superior de color (puede contener el texto del rol o una imagen de fondo) -->
+                        <div>
+                            <p>ROL: DEVELOPER</p>
+                        </div>
+
+                        <!-- Bloque inferior blanco -->
+                        <div>
+                            <div >
+                                <h3>Arquitectura & Microservicios</h3>
+                                <p>Diseno modular desacoplado en TypeScript con patrones de arquitectura en capas e integración continua.</p>
+                            </div>
+
+                            <!-- Pie de tarjeta con etiquetas a la izquierda y enlace a la derecha -->
+                            <div>
+                                <div>
+                                    <span>TypeScript</span>
+                                    <span>Node.js</span>
+                                </div>
+                                <a href="#">Detalles ➔</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="hablemos">
                 <div>
+                    <h1>Hablemos</h1>
+                    <p>Cuéntame sobre tu proyecto o duda y te responderé lo antes posible</p>
+                </div>
+                <form action="#" method="post">
                     <div>
-                        <!--Tarjeta 1-->
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                     </div>
+
                     <div>
-                        <!--Tarjeta 1-->
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Tu mejor email" required>
                     </div>
+
+                    <!-- Campo obligatorio exigido en la rúbrica de UD2 -->
                     <div>
-                        <!--Tarjeta 1-->
+                        <label for="dni">DNI</label>
+                        <input 
+                            type="text" 
+                            id="dni" 
+                            name="dni" 
+                            placeholder="12345678A" 
+                            pattern="[0-9]{8}[A-Za-z]" 
+                            title="Debe contener 8 cifras seguidas de una letra" 
+                            required>
                     </div>
+
+                    <div>
+                        <label for="mensaje">MENSAJE</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En que puedo ayudarte?" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-superior">
+                <a href="#"><img src="imagenes/logo-rebeccacampos.png" /></a>
+
+                <!-- Navegación interna -->
+                <nav>
+                    <a href="#">Proyectos</a>
+                    <a href="#">Recursos</a>
+                    <a href="#">Trabaja conmigo</a>
+                </nav>
+
+                <!-- Enlaces externos / Redes -->
+                <div class="footer-social">
+                    <a href="https://github.com/rebeccacampos" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/levelupwithbecca" target="_blank">Linkedin</a>
                 </div>
             </div>
-        </main>
-        <footer></footer>
+
+        <p class="footer-copyright">© 2026 Rebecca Campos</p>
+        </footer>
     </body>
 </html>

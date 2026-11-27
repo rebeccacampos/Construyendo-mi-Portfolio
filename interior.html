@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>levelupwithbecca</title>
+</head>
+<body>
+    <header>
+        <nav id="sticky-nav">
+            <!-- quiero que sea sticky -->
+            <!-- ⚠️ exportar bien todas las imagenes en figma para que tengan buena calidad -->
+            <a href="#"><img src="imagenes/logo-rebeccacampos.png" /></a>
+            <!-- ⚠️Comprobar⚠️ quiero que lleve al inicio de la página home (index.html) -->
+            <div>
+                <a href="linkpaginadeproyectos">Proyectos</a>
+                <a href="linkpaginaderecursos">Recursos</a>
+                <a href="linkpaginatrabajaconmigo">Trabaja conmigo</a>
+            </div>
+            <div>
+            <!-- ⚠️ exportar bien las imagenes en figma para que tengan buena calidad -->
+            <img src="imagenes/lupa.png" />
+            <button type="button">ES | EN</button>
+            <img src="imagenes/luna.png" />
+            </div>
+        </nav>
+        <section>
+            <div>
+                <p>Product Management . Diseño UX . Desarrollo Full Stack</p>
+                </div>
+                    <h1>
+                        Donde el <span>código</span>, el <span>diseño UX</span> 
+                        y la <span>estrategia de producto </span> convergen.
+                    </h1>
+                    <p>
+                        Level Up with Becca (LUwB) es el proyecto donde condenso mi experiencia real liderando
+                        equipos, diseñando arquitecturas y lanzando productos. Diseñado para garantizar la
+                        excelencia técnica en empresas y acercar el mundo del desarrollo web a todas las personas.
+                    </p>
+                <div>
+                <button type="button">Explorar Cursos & Recursos Gratuitos</button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section>
+            <h1>Los 3 pilares de LUwB</h1>
+            <p>Por qué los equipos que adoptan el marco de trabajo de Rebecca 
+                entregan software más rápido y con menor deuda técnica
+            </p>
+            <div>
+                <div>
+                    <div>
+                        <img src="imagenes/circulito-azul.png"> 
+                        <div>
+                            <p>Desarrollo y Tecnología</p>
+                        </div>
+                        <h2>Arquitectura limpia</h2>
+                        <p>
+                            Estructuras desacopladas, patrones de diseño
+                            modernos y buenas prácticas de desarrollo que
+                            resisten la escala y el crecimiento.
+                        </p>
+                    </div> 
+                </div>
+
+                <div>
+                    <div>
+                        <img src="imagenes/circulito-verde.png">
+                        <div>
+                            <p>Branding y Diseño</p>
+                        </div>
+                        <h2>Diseño UX/UI Accesible</h2>
+                        <p>
+                            Interfaces pensadas para humanos reales,
+                            prototipado rápido y sistemas de diseño robustos
+                            pensados por y para el usuario.
+                        </p>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="imagenes/circulito-amarillo.png">
+                        <div>
+                            <p>Producto & Metodologías Agiles</p>
+                        </div>
+                        <h2>Product Management</h2>
+                        <p>
+                            Priorización rigurosa, refinamiento continuo de
+                            backlog y criterios de aceptación sin ambigüedades
+                            para eliminar bloqueos de desarrollo.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h1>Recursos</h1>
+                <nav>
+                    <!-- Aquí la idea es que vaya el nav de la sección de proyectos:
+                    la funcionalidad del buscador y los filtros se harán con javascript-->
+                    <div class="contenedor-buscador">
+                        <img src="imagenes/lupa.png" />
+                        <!-- no usamos la etiqueta form ya que no queremos enviar datos al servidor, 
+                        la idea es usar un .addEventListener() usando javascript para usar el input como filtro en tiempo real  -->
+                        <input type="text" id="buscador-recursos" name="recursosAbuscar" placeholder="Buscar recurso..."> 
+                    </div>
+                    <!-- botones que actuan como filtros
+                    No van dentro de una etiqueta form  porque son controles de interfaz, 
+                    no tienen el propósito de recoger datos del usuario para enviarlos o procesarlos a un servidor-->
+                    <button type="button">Todos</button>
+                    <button type="button">Productos</button>
+                    <button type="button">UX/UI</button>
+                    <button type="button">Software</button>
+                </nav>
+            </div>
+            <div id="grid-recursos">
+                <article> 
+                    <!-- Bloque superior de color (puede contener el texto del rol o una imagen de fondo) -->
+                    <div>
+                        <p>GRATIS - PLANTILLA</p>
+                    </div>
+
+                    <!-- Bloque inferior blanco -->
+                    <div>
+                        <div >
+                            <h3>Scrum User Story</h3>
+                            <p>
+                                Plantilla lista para usar en Jira o Notion que elimina
+                                la ambigüedad en los criterios de aceptación para desarrolladores.
+                            </p>
+                        </div>
+
+                        <!-- Pie de tarjeta con etiquetas a la izquierda y enlace a la derecha -->
+                        <div>
+                            <div>
+                                <span>Format: Markdown / Notion</span>
+                            </div>
+                            <a href="#">Detalles ➔</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ❤️❤️❤️❤️❤️❤️ FALTA AÑADIR EL RESTO DE ARTICLES DE RECURSOS -->
+            </div>
+
+        </section>
+            <a href="#">>
+                <div>
+                    <h3>¿Quieres aprender?</h3>
+                    <p>Accede a todo el contenido realizado por Rebecca</p>
+                    <a href="#">Detalles ➔</a>
+                </div>
+            </a>
+            <a href="#">>
+                <div>
+                    <h3>¿Quieres trabajar conmigo?</h3>
+                    <p>Accede a mi portfolio completo y servicios 1-1</p>
+                    <a href="index.html">Volver a rebeccacampos.com ➔</a>
+                </div>
+            </a>
+        <section>
+
+        </section>
+
+        <section class="hablemos">
+                <div>
+                    <h1>Hablemos</h1>
+                    <p>Cuéntame sobre tu proyecto o duda y te responderé lo antes posible</p>
+                </div>
+                <form action="#" method="post">
+                    <div>
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div>
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Tu mejor email" required>
+                    </div>
+
+                    <!-- Campo obligatorio exigido en la rúbrica de UD2 -->
+                    <div>
+                        <label for="dni">DNI</label>
+                        <input 
+                            type="text" 
+                            id="dni" 
+                            name="dni" 
+                            placeholder="12345678A" 
+                            pattern="[0-9]{8}[A-Za-z]" 
+                            title="Debe contener 8 cifras seguidas de una letra" 
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">MENSAJE</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En que puedo ayudarte?" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-superior">
+                <a href="#"><img src="imagenes/logo-rebeccacampos.png" /></a>
+
+                <!-- Navegación interna -->
+                <nav>
+                    <a href="#">Proyectos</a>
+                    <a href="#">Recursos</a>
+                    <a href="#">Trabaja conmigo</a>
+                </nav>
+
+                <!-- Enlaces externos / Redes -->
+                <div class="footer-social">
+                    <a href="https://github.com/rebeccacampos" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/levelupwithbecca" target="_blank">Linkedin</a>
+                </div>
+            </div>
+
+        <p class="footer-copyright">© 2026 Rebecca Campos</p>
+        </footer>
+    </main>
+    
+</body>
+</html>
